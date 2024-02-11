@@ -44,7 +44,7 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
+  title: 'Matteo Ragazzini',
   description: "Example site built with Tim Baker's react resume template",
 };
 
@@ -59,7 +59,7 @@ export const SectionId = {
   Resume: 'resume',
   Skills: 'skills',
   Stats: 'stats',
-  Testimonials: 'testimonials',
+  // Testimonials: 'testimonials',
 } as const;
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
@@ -69,18 +69,16 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Matteo Ragazzini.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a <strong className="text-stone-100">Software Developer Engineer</strong> working at <strong className="text-stone-100">Amazon</strong>. 
+        I'm responsible of enabling the Transportation org. with all the <strong className="text-stone-100">AWS resources</strong> needed to run optimization models that shape how Amazon will look like in the future. 
+        Previously I was working as a <strong className="text-stone-100">Business Intelligence Engineer</strong>, with the goal of improving the E2E Cost per Package without degrading the Customer Experience.  
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+       In my free time, you can catch me <strong className="text-stone-100">cooking</strong>, mainly traditional Italian recipies, <strong className="text-stone-100">training</strong> or <strong className="text-stone-100">planning</strong> my next vacation. 
       </p>
     </>
   ),
@@ -104,16 +102,15 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I am an energetic and collaborative individual who is easy to work with. During my studies, I worked as a barman in various discos, which allowed me to develop strong communication and interpersonal skills. 
+   Having lived in different countries, including Italy, Stockholm, Luxembourg, and Munich, I bring a global perspective to everything I do, which helps me adapt to new situations and work collaboratively with people from diverse backgrounds. I am committed to using my skills and experience to contribute to the success of any team I join.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Munich, DE', Icon: MapIcon},
+    {label: 'Age', text: '25', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Italian', Icon: FlagIcon},
+    {label: 'Interests', text: 'Cooking, Sports, Travelling', Icon: SparklesIcon},
+    {label: 'Study', text: 'University of Bologna', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'Amazon', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -129,66 +126,66 @@ export const skills: SkillGroup[] = [
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
+        name: 'Italian',
+        level: 10,
       },
       {
-        name: 'Spanish',
-        level: 3,
+        name: 'German',
+        level: 2,
       },
     ],
   },
   {
-    name: 'Frontend development',
+    name: 'AWS services',
     skills: [
       {
-        name: 'React',
+        name: 'CDK',
         level: 9,
       },
       {
-        name: 'Typescript',
-        level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Backend development',
-    skills: [
-      {
-        name: 'Node.js',
+        name: 'IAM',
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
+        name: 'Compute Services',
+        level: 8,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'Software Development',
     skills: [
       {
-        name: 'React Native',
+        name: 'Web Development',
+        level: 8,
+      },
+      {
+        name: 'Java',
         level: 9,
       },
       {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
+        name: 'Python',
+        level: 7,
       },
     ],
   },
+  {
+    name: 'Data Engineering',
+    skills: [
+      {
+        name: 'SQL',
+        level: 10,
+      },
+      {
+        name: 'Excel',
+        level: 9,
+      },
+      {
+        name: 'Data Visualization',
+        level: 9,
+      },
+    ],
+  }
 ];
 
 /**
@@ -268,39 +265,65 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
+    date: '2023',
+    location: 'University of Bologna',
+    title: 'Masters in Computer Science and Engineering',
     content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
+    date: '2022',
+    location: 'Stockholm University',
+    title: 'Erasmus+ program in Computer Science',
     content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
   },
+  {
+    date: '2020',
+    location: 'University of Bologna',
+    title: 'Bachelors in Computer Science and Engineering',
+    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+  }
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'December 2023 - Current',
+    location: 'Amazon, Munich',
+    title: 'Software Developer Engineer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Develop, deploy and maintain highly robust infrastructure service to support Amazon Network Optimization. 
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'Sept 2022 - December 2023',
+    location: 'Amazon, Munich',
+    title: 'Business Intelligence Engineer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+      collect and analyze data, providing insights that drive business decisions. Focusing on E2E Cost per Package reduction on Amazon supply-chain
+      </p>
+    ),
+  },
+  {
+    date: 'Feb 2022 - Sept 2022',
+    location: 'Amazon, Luxembourg',
+    title: 'Business Intelligence Engineer Intern',
+    content: (
+      <p>
+        Development of data pipelines and dashboard on Speed. 
+      </p>
+    ),
+  },
+  {
+    date: 'Jun 2020 - Sept 2020',
+    location: 'University of Bologna - Network and security department',
+    title: 'Software Engineer Intern',
+    content: (
+      <p>
+        Creation, test and deployment of Guacamole, a containerized clientless remote desktop
+gateway to access computer’s lab remotely. This service is now active and reachable for all
+students of the UNIBO.
       </p>
     ),
   },
@@ -336,27 +359,27 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'Feel Free to drop me an email or contact me through the socials below.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'reachout@matteoragazzini.com',
+      href: 'reachout@matteoragazzini.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Munich, Germany',
+      href: 'https://www.google.com/maps/place/Amazon/@48.1829902,11.5930654,17z/data=!3m1!4b1!4m6!3m5!1s0x479e7448095723ed:0x7747ed42175341c6!8m2!3d48.1829867!4d11.5956403!16s%2Fg%2F1q5gvfjvs?entry=ttu',
     },
     {
       type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: '@matteoraga',
+      href: 'https://www.instagram.com/matteoraga/',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'MatteoRagazzini',
+      href: 'https://github.com/MatteoRagazzini',
     },
   ],
 };
@@ -365,9 +388,7 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/MatteoRagazzini'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/matteo-ragazzini-9b41961b0/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/matteoraga/'},
 ];
