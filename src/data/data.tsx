@@ -13,6 +13,7 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/header-background.webp';
 import profilepic from '../images/profilepic.jpg';
+import {calculateAge} from '../utils/calculateAge';
 import {
   About,
   ContactSection,
@@ -88,7 +89,7 @@ export const aboutData: About = {
    Having lived in different countries, including Italy, Stockholm, Luxembourg, and Munich, I bring a global perspective to everything I do, which helps me adapt to new situations and work collaboratively with people from diverse backgrounds. I am committed to using my skills and experience to contribute to the success of any team I join.`,
   aboutItems: [
     {label: 'Location', text: 'Munich, DE', Icon: MapIcon},
-    {label: 'Age', text: '25', Icon: CalendarIcon},
+    {label: 'Age', text: `${calculateAge('1998-03-03')}`, Icon: CalendarIcon},
     {label: 'Nationality', text: 'Italian', Icon: FlagIcon},
     {label: 'Interests', text: 'Cooking, Sports, Travelling', Icon: SparklesIcon},
     {label: 'Study', text: 'University of Bologna', Icon: AcademicCapIcon},
