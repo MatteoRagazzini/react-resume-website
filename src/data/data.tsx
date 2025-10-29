@@ -30,7 +30,7 @@ import {
  */
 export const homePageMeta: HomepageMeta = {
   title: 'Matteo Ragazzini',
-  description: "Hi, I'm Matteo a Software Developer in Amazon. Come check out my page!",
+  description: "Hi, I'm Matteo — a Software Development Engineer at Amazon focused on transportation network optimization. Come check out my page!",
 };
 
 /**
@@ -56,12 +56,10 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a <strong className="text-stone-100">Software Developer Engineer</strong> working at <strong className="text-stone-100">Amazon</strong>. 
-        I'm responsible of enabling the Transportation org. with all the <strong className="text-stone-100">AWS resources</strong> needed to run optimization models that shape how Amazon will look like in the future. 
-        Previously I was working as a <strong className="text-stone-100">Business Intelligence Engineer</strong>, with the goal of improving the E2E Cost per Package without degrading the Customer Experience.  
+        I'm a <strong className="text-stone-100">Software Development Engineer</strong> at <strong className="text-stone-100">Amazon</strong> in Munich, working on transportation network optimization and planning systems. I build scalable services and automation to support forecasting and planning across the organization.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-       In my free time, you can catch me <strong className="text-stone-100">cooking</strong>, mainly traditional Italian recipies, <strong className="text-stone-100">training</strong> or <strong className="text-stone-100">planning</strong> my next vacation. 
+        Previously I worked as a <strong className="text-stone-100">Business Intelligence Engineer</strong> in Luxembourg where I focused on data pipelines and real-time analytics to improve delivery cost and performance.
       </p>
     </>
   ),
@@ -85,8 +83,7 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `I am an energetic and collaborative individual who is easy to work with. During my studies, I worked as a barman in various discos, which allowed me to develop strong communication and interpersonal skills. 
-   Having lived in different countries, including Italy, Stockholm, Luxembourg, and Munich, I bring a global perspective to everything I do, which helps me adapt to new situations and work collaboratively with people from diverse backgrounds. I am committed to using my skills and experience to contribute to the success of any team I join.`,
+  description: `Energetic and collaborative software engineer experienced in building data pipelines, automation, and full-stack tools. I have lived and worked across Italy, Sweden, Luxembourg and Germany which helps me adapt quickly and work well in diverse teams.`,
   aboutItems: [
     {label: 'Location', text: 'Munich, DE', Icon: MapIcon},
     {label: 'Age', text: `${calculateAge('1998-03-03')}`, Icon: CalendarIcon},
@@ -178,52 +175,55 @@ export const education: TimelineItem[] = [
   {
     date: '2023',
     location: 'University of Bologna',
-    title: 'Masters in Computer Science and Engineering',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    title: 'Master of Engineering in Computer Science and Software Engineering — 110L/110' 
   },
   {
     date: '2022',
     location: 'Stockholm University',
-    title: 'Erasmus+ program in Computer Science',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    title: 'Master of Science in Computer Science'
   },
   {
     date: '2020',
     location: 'University of Bologna',
-    title: 'Bachelors in Computer Science and Engineering',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    title: 'Bachelor of Engineering in Computer Science and Software Engineering — 108/110'
   }
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'December 2023 - Current',
-    location: 'Amazon, Munich',
-    title: 'Software Developer Engineer',
+    date: 'July 2023 - Present',
+    location: 'Amazon, Munich, Germany',
+    title: 'Software Development Engineer',
     content: (
-      <p>
-        Develop, deploy and maintain highly robust infrastructure service to support Amazon Network Optimization. 
-      </p>
+      <ul className="list-disc ml-6 space-y-2">
+        <li>
+          Developed a <strong>Java</strong> application to analyze Amazon's Same Day delivery network, identifying opportunities to increase delivery speed and extend service hours. Built interactive dashboards using <strong>AWS Quicksight</strong> to visualize network performance metrics.
+        </li>
+        <li>
+          Led the design and development of an automated modeling framework using <strong>AWS CDK</strong>, <strong>AWS Lambda</strong>, <strong>Step Functions</strong>, <strong>DynamoDB</strong>, and <strong>REST APIs</strong>, automating manual modeling processes across multiple teams and reducing analysts' time by ~35%.
+        </li>
+        <li>
+          Built a full-stack planning support tool using <strong>Python</strong>, <strong>AWS Step Functions</strong>, and <strong>React</strong> that interacts with external APIs to compare forecasted plans against actual results, enabling VP-level strategic planning.
+        </li>
+        <li>
+          Served as the software engineering representative for a 200+ person organization, driving adoption of security best practices, code quality standards, and maintainable architecture.
+        </li>
+      </ul>
     ),
   },
   {
-    date: 'Sept 2022 - December 2023',
-    location: 'Amazon, Munich',
+    date: 'Feb 2022 - July 2023',
+    location: 'Amazon, Luxembourg',
     title: 'Business Intelligence Engineer',
     content: (
-      <p>
-      collect and analyze data, providing insights that drive business decisions. Focusing on E2E Cost per Package reduction on Amazon supply-chain
-      </p>
-    ),
-  },
-  {
-    date: 'Feb 2022 - Sept 2022',
-    location: 'Amazon, Luxembourg',
-    title: 'Business Intelligence Engineer Intern',
-    content: (
-      <p>
-        Development of data pipelines and dashboard on Speed. 
-      </p>
+      <ul className="list-disc ml-6 space-y-2">
+        <li>
+          Built a <strong>SQL</strong> data pipeline aggregating 12+ datasets to calculate granular delivery costs across Amazon's logistics network. Processed ~5TB annually and enabled 65+ teams to identify cost-saving opportunities for SVP-level initiatives.
+        </li>
+        <li>
+          Developed a real-time analytics pipeline in <strong>Amazon Redshift</strong> to monitor delivery performance, missed deliveries, and weather conditions at zip code level; dashboards served 85+ users with 3,000+ interactions.
+        </li>
+      </ul>
     ),
   },
   {
@@ -231,11 +231,11 @@ export const experience: TimelineItem[] = [
     location: 'University of Bologna - Network and security department',
     title: 'Software Engineer Intern',
     content: (
-      <p>
-        Creation, test and deployment of Guacamole, a containerized clientless remote desktop
-gateway to access computer’s lab remotely. This service is now active and reachable for all
-students of the UNIBO.
-      </p>
+      <ul className="list-disc ml-6">
+        <li>
+          Created, tested and deployed Guacamole, a containerized clientless remote desktop gateway to access computer labs remotely; the service is active and used by UNIBO students.
+        </li>
+      </ul>
     ),
   },
 ];
