@@ -2,7 +2,7 @@
 
 // https://github.com/vercel/next.js/blob/master/packages/next/next-server/server/config.ts
 const nextConfig = {
-  webpack: config => {
+  webpack: (config, { dev }) => {
     const oneOfRule = config.module.rules.find(rule => rule.oneOf);
 
     // Next 12 has multiple TS loaders, and we need to update all of them.
@@ -12,6 +12,11 @@ const nextConfig = {
       // eslint-disable-next-line no-param-reassign
       rule.include = undefined;
     });
+
+    // Disable cache in production
+    if (!dev) {
+      config.cache = false;
+    }
 
     return config;
   },
